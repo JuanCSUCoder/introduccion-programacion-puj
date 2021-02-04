@@ -41,4 +41,5 @@ int main(){
         }
         cout << " Tenga un pirulito y vaya para la casa" << endl;
     }
+    return 0;
 }
