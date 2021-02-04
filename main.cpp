@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     bool active = true;
     while (active)
     {
@@ -12,14 +13,15 @@ int main(){
         cin >> numero;
         cout << endl;
 
-        if(numero%2!=0){
+        if (numero % 2 != 0)
+        {
             cout << "Es impar" << endl;
-        } else
+        }
+        else
         {
             cout << "Es par" << endl;
         }
     }
-    
-    
+
     return 1;
 }

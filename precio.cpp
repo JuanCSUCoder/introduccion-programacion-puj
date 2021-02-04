@@ -2,7 +2,8 @@
 
 using namespace std;
 
-bool preguntaSiONo(string pregunta) {
+bool preguntaSiONo(string pregunta)
+{
     string respuesta;
     bool resultado;
     bool valida = false;
@@ -12,26 +13,30 @@ bool preguntaSiONo(string pregunta) {
         cout << pregunta << " (s/n): ";
         cin >> respuesta;
 
-        if(respuesta=="s" || respuesta == "S"){
+        if (respuesta == "s" || respuesta == "S")
+        {
             valida = true;
             resultado = true;
-        } else
+        }
+        else
         {
-            if (respuesta=="n" || respuesta == "N"){
+            if (respuesta == "n" || respuesta == "N")
+            {
                 valida = true;
                 resultado = false;
             }
         }
-        if(!valida) {
+        if (!valida)
+        {
             cout << "De una respuesta valida por favor" << endl;
         }
-        
     }
 
     return resultado;
 }
 
-int main(){
+int main()
+{
     bool andando = true;
     bool queso, tocineta, lechuga;
     int precio;
@@ -44,36 +49,47 @@ int main(){
         tocineta = preguntaSiONo("Quiere incluir tocineta a su pedido?");
         lechuga = preguntaSiONo("Quiere incluir lechuga a su pedido?");
 
-        if(queso){
-            if(tocineta){
+        if (queso)
+        {
+            if (tocineta)
+            {
                 precio = 10000;
-            } else {
-                if (lechuga) {
+            }
+            else
+            {
+                if (lechuga)
+                {
                     precio = 8000;
-                }else
+                }
+                else
                 {
                     cout << "Error: El pedido ingresado no tiene un precio definido" << endl;
                 }
-                
             }
-        } else {
-            if(tocineta) {
-                precio = 7000;
-            } else
+        }
+        else
+        {
+            if (tocineta)
             {
-                if(lechuga) {
+                precio = 7000;
+            }
+            else
+            {
+                if (lechuga)
+                {
                     precio = 6000;
-                } else {
+                }
+                else
+                {
                     cout << "Error: El pedido ingresado no tiene un precio definido" << endl;
                 }
             }
-            
         }
 
         cout << "El pedido vale: " << precio << endl;
 
         andando = preguntaSiONo("Desea realizar otro pedido?");
     }
-    
+
     cout << "Cerrando el sistema" << endl;
 }
