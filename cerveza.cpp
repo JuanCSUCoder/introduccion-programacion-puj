@@ -4,11 +4,26 @@ using namespace std;
 
 int main(){
     int edad, numCervezas;
-    cout << "¿Cuantas cervezas quiere? ";
-    cin >> numCervezas;
+    bool edadValida = false, numValido = false;
+    while (!edadValida || !numValido)
+    {
+        cout << "¿Cuantas cervezas quiere? ";
+        cin >> numCervezas;
 
-    cout << "¿Cuál es su edad? ";
-    cin >> edad;
+        cout << "¿Cuál es su edad? ";
+        cin >> edad;
+
+        if (numCervezas >= 0) {
+            numValido = true;
+        }
+        if (edad >= 0) {
+            edad = true;
+        }
+        if (!edadValida || !numValido) {
+            cout << "Ingrese una entrada válida" << endl;
+        }
+    }
+    
     
     if (edad > 17) {
         if (numCervezas > 1){
