@@ -40,6 +40,7 @@ int main()
 {
     int dia;
     bool activo = true;
+    string dias[7] = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"};
 
     while (activo)
     {
@@ -61,36 +62,10 @@ int main()
             cout << "El día ingresado no es laborable y es ";
         }
 
-        // Escribir el día
-        switch (dia)
-        {
-        case 1:
-            cout << "Lunes";
-            break;
-        case 2:
-            cout << "Martes";
-            break;
-        case 3:
-            cout << "Miercoles";
-            break;
-        case 4:
-            cout << "Jueves";
-            break;
-        case 5:
-            cout << "Viernes";
-            break;
-        case 6:
-            cout << "Sabado";
-            break;
-        case 7:
-            cout << "Domingo";
-            break;
-        default:
-            break;
+        if (dia <= 7) {
+            // Imprimir nombre del día día
+            cout << dias[dia-1] << endl;
         }
-
-        // Agregar Salto de Línea
-        cout << endl;
 
         // Preguntar si se desea seguir usando el programa
         activo = preguntaSiONo("Desea continuar?");
