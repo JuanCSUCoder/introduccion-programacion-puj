@@ -36,7 +36,8 @@ bool preguntaSiONo(string pregunta)
     return resultado;
 }
 
-int main() {
+int main()
+{
     int dia;
     bool activo = true;
 
@@ -47,40 +48,45 @@ int main() {
         cin >> dia;
 
         // Determinar si es laborable
-        if (1 <= dia && dia <= 5) {
+        if (1 <= dia && dia <= 5)
+        {
             cout << "El día ingresado es laborable y es ";
-        } else if (dia > 7) {
+        }
+        else if (dia > 7)
+        {
             cout << "El día ingresado no es valido";
-        } else {
+        }
+        else
+        {
             cout << "El día ingresado no es laborable y es ";
         }
 
         // Escribir el día
         switch (dia)
         {
-            case 1:
-                cout << "Lunes";
-                break;
-            case 2:
-                cout << "Martes";
-                break;
-            case 3:
-                cout << "Miercoles";
-                break;
-            case 4:
-                cout << "Jueves";
-                break;
-            case 5:
-                cout << "Viernes";
-                break;
-            case 6:
-                cout << "Sabado";
-                break;
-            case 7:
-                cout << "Domingo";
-                break;
-            default:
-                break;
+        case 1:
+            cout << "Lunes";
+            break;
+        case 2:
+            cout << "Martes";
+            break;
+        case 3:
+            cout << "Miercoles";
+            break;
+        case 4:
+            cout << "Jueves";
+            break;
+        case 5:
+            cout << "Viernes";
+            break;
+        case 6:
+            cout << "Sabado";
+            break;
+        case 7:
+            cout << "Domingo";
+            break;
+        default:
+            break;
         }
 
         // Agregar Salto de Línea
@@ -89,8 +95,8 @@ int main() {
         // Preguntar si se desea seguir usando el programa
         activo = preguntaSiONo("Desea continuar?");
     }
-    
+
     cout << "Finalizando" << endl;
-    
+
     return 0;
 }
