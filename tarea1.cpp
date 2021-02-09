@@ -42,9 +42,11 @@ int main() {
 
     while (activo)
     {
+        // Preguntar Día
         cout << "Ingrese un número del día de la semana: ";
         cin >> dia;
 
+        // Determinar si es laborable
         if (1 <= dia && dia <= 5) {
             cout << "El día ingresado es laborable y es ";
         } else if (dia > 7) {
@@ -53,6 +55,7 @@ int main() {
             cout << "El día ingresado no es laborable y es ";
         }
 
+        // Escribir el día
         switch (dia)
         {
             case 1:
@@ -80,8 +83,10 @@ int main() {
                 break;
         }
 
+        // Agregar Salto de Línea
         cout << endl;
 
+        // Preguntar si se desea seguir usando el programa
         activo = preguntaSiONo("Desea continuar?");
     }
     
