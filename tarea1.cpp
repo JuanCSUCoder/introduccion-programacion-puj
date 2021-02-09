@@ -46,12 +46,35 @@ int main() {
         cin >> dia;
 
         if (1 <= dia && dia <= 5) {
-            cout << "El día ingresado es laborable" << endl;
+            cout << "El día ingresado es laborable y es ";
         } else if (dia > 7) {
-            cout << "El día ingresado no es valido" << endl;
+            cout << "El día ingresado no es valido";
         } else {
-            cout << "El día ingresado no es laborable" << endl;
+            cout << "El día ingresado no es laborable y es ";
         }
+
+        switch (dia)
+        {
+            case 1:
+                cout << "Lunes";
+                break;
+            case 2:
+                cout << "Martes";
+            case 3:
+                cout << "Miercoles";
+            case 4:
+                cout << "Jueves";
+            case 5:
+                cout << "Viernes";
+            case 6:
+                cout << "Sabado";
+            case 7:
+                cout << "Domingo";
+            default:
+                break;
+        }
+
+        cout << endl;
 
         activo = preguntaSiONo("Desea continuar?");
     }
