@@ -8,12 +8,12 @@
             "name": "g++ - Compilar y depurar el archivo activo",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/bin/${fileBasenameNoExtension}",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
+            "console": "externalTerminal",
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -22,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++ build active file",
+            "preLaunchTask": "C/C++: g++ compilar archivo activo",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
