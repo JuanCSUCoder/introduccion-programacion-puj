@@ -2,6 +2,11 @@
 
 using namespace std;
 
+/**
+ * Aclaración:
+ * Soluciona el "Ejercicio 1" para una cantidad indefinida de números, no para 5 números como se indicó en la clase
+ **/
+
 int main()
 {
     cout << "Ingrese una secuencia de números a continuación y escriba 0 para terminar" << endl;
