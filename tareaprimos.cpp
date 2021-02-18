@@ -17,7 +17,7 @@ int main()
             if (numero > 1 || numero < -1)
             {
                 bool par_encontrado = false;
-                for (int i = 2; i < numero && !par_encontrado; i++)
+                for (int i = 2; i < numero/2 && !par_encontrado; i++)
                 {
                     if (numero % i == 0)
                     {
