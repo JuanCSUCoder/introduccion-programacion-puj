@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    unsigned short int i = 1; 
+    unsigned short int i = 1;
     while (i <= 10)
     {
         cout << endl
