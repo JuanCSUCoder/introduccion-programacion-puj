@@ -25,7 +25,7 @@ int main(){
 
     cout << "s = ";
 
-    while(s>10){
+    while(s>=10){
         while(s!=0) {
             cout << " + " << s%10;
             nuevo_s += s%10;
