@@ -49,22 +49,27 @@ int main()
     {
         if (A <= 20000)
         {
-            A *= (tA/100)+1;
-        } else {
-            A *= (tA/200)+1;
+            A *= (tA / 100) + 1;
+        }
+        else
+        {
+            A *= (tA / 200) + 1;
         }
 
         if (B <= 20000)
         {
-            B *= (tB/100)+1;
-        } else {
-            B *= (tB/200)+1;
+            B *= (tB / 100) + 1;
+        }
+        else
+        {
+            B *= (tB / 200) + 1;
         }
         meses++;
     }
 
     // Mostrar el resultado del tiempo acumulado
-    cout << "Meses en que A superará a B: " << meses << endl;
+    cout << endl
+         << "Meses en que A superará a B: " << meses << endl;
     cout << "Poblaciones Finales -------------" << endl;
     cout << "Población A: " << A << endl;
     cout << "Población B: " << B << endl;
