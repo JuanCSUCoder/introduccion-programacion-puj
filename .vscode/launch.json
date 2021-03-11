@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "g++ - Compilar y depurar el archivo activo",
+            "name": "g++ - gdb - Compilar y depurar el archivo activo",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
@@ -22,6 +22,26 @@
                 }
             ],
             "preLaunchTask": "C/C++: g++ compilar archivo activo",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "gdb - Depurar Archivo Activo Sin Compilar",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Habilitar la impresión con sangría para gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
