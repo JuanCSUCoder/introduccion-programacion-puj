@@ -1,9 +1,11 @@
 /* rand example: guess the number */
-#include <stdio.h>      /* printf, scanf, puts, NULL */
+#include <iostream>      /* printf, scanf, puts, NULL */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
 // Retrieved from: https://www.cplusplus.com/reference/cstdlib/rand/
+
+using namespace std;
 
 int main ()
 {
@@ -16,12 +18,12 @@ int main ()
   iSecret = rand() % 10 + 1;
 
   do {
-    printf ("Guess the number (1 to 10): ");
-    scanf ("%d",&iGuess);
-    if (iSecret<iGuess) puts ("The secret number is lower");
-    else if (iSecret>iGuess) puts ("The secret number is higher");
+    cout << "Guess the number (1 to 10): " << endl;
+    cin >> iGuess;
+    if (iSecret<iGuess) cout << "The secret number is lower" << endl;
+    else if (iSecret>iGuess) cout << "The secret number is higher" << endl;
   } while (iSecret!=iGuess);
 
-  puts ("Congratulations!");
+  cout << "Congratulations!"<< endl;
   return 0;
 }
