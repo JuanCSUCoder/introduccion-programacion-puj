@@ -4,7 +4,8 @@
 
 using namespace std;
 
-int lanzarDado() {
+int lanzarDado()
+{
 	return rand() % 6 + 1;
 }
 
@@ -27,7 +28,7 @@ int main()
 			cont3++;
 		}
 	}
-	
+
 	cout << "El valor 3 salió " << cont3 << "veces" << endl;
 
 	return 0;
