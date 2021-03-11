@@ -4,7 +4,8 @@ using namespace std;
 
 bool esPrimo(int);
 
-int main() {
+int main()
+{
     int num;
 
     cout << "Ingrese un número: ";
@@ -12,20 +13,24 @@ int main() {
 
     bool primo = esPrimo(num);
 
-    if(primo) {
+    if (primo)
+    {
         cout << "El número es primo" << endl;
-    } else {
+    }
+    else
+    {
         cout << "El número no es primo" << endl;
     }
 
     return 0;
 }
 
-bool esPrimo(int n) {
+bool esPrimo(int n)
+{
     bool resultado = true;
-    for (int i = 2; i < (n/2)+1; i++)
+    for (int i = 2; i < (n / 2) + 1; i++)
     {
-        if (n%i==0)
+        if (n % i == 0)
         {
             resultado = false;
         }
