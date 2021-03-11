@@ -19,7 +19,7 @@ int main()
 
   do
   {
-    cout << "Guess the number (1 to 10): " << endl;
+    cout << "Guess the number (1 to 10): ";
     cin >> iGuess;
     if (iSecret < iGuess)
       cout << "The secret number is lower" << endl;
