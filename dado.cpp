@@ -29,7 +29,7 @@ int main()
 		}
 	}
 
-	cout << "El valor 3 salió " << cont3 << "veces" << endl;
+	cout << "El valor 3 salió " << cont3 << " veces" << endl;
 
 	return 0;
 }
