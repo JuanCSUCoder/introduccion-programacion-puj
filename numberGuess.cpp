@@ -3,6 +3,8 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
+// Retrieved from: https://www.cplusplus.com/reference/cstdlib/rand/
+
 int main ()
 {
   int iSecret, iGuess;
