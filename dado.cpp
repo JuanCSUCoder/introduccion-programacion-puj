@@ -4,15 +4,20 @@
 
 using namespace std;
 
+int lanzarDado() {
+	return rand() % 6 + 1;
+}
+
 int main()
 {
 	cout << "Inicializando con semilla aleatoria ..." << endl;
 	srand(time(NULL));
 
-	cout << "Simulando lanzamiento de un dado ...." << endl;
-	int resultado = rand() % 6 + 1;
-
-	cout << "En el dado salió: " << resultado << endl;
+	for (int i = 0; i < 1000000; i++)
+	{
+		cout << "Simulación " << i + 1 << endl;
+		cout << "En el dado salió: " << lanzarDado() << endl;
+	}
 
 	return 0;
 }
