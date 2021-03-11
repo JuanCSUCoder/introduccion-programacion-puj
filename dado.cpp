@@ -20,8 +20,8 @@ int main()
 	for (int i = 0; i < 1000000; i++)
 	{
 		estadoDado = lanzarDado();
-		cout << "Simulación " << i + 1 << endl;
-		cout << "En el dado salió: " << estadoDado << endl;
+		// cout << "Simulación " << i + 1 << endl;
+		// cout << "En el dado salió: " << estadoDado << endl;
 
 		if (estadoDado == 3)
 		{
