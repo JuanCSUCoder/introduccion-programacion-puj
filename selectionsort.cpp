@@ -21,6 +21,29 @@ int main()
 		cin >> n[i];
 	}
 	
+	// Algoritmo
+	for (size_t i = 0; i < long_arreglo; i++)
+	{
+		for (size_t j = 0; j < long_arreglo; j++)
+		{
+			if (n[j] > n[i])
+			{
+				// Intercambiar
+				n[j] += n[i];
+				n[i] = n[j] - n[i];
+				n[j] -= n[i];
+			}
+		}
+	}
+
+	// Imprimir Resultado
+	cout << "Arreglo Ordenado -----------" << endl;
+	for (size_t i = 0; i < long_arreglo; i++)
+	{
+		cout << "#" << i+1 << ": " << n[i] << endl;
+	}
+	
+	
 
 	return 0;
 }
