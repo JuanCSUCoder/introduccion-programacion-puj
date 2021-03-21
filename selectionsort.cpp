@@ -17,10 +17,10 @@ int main()
 	// Guardar Arreglo de Números a Ordenar
 	for (size_t i = 0; i < long_arreglo; i++)
 	{
-		cout << "#" << i+1 << ": ";
+		cout << "#" << i + 1 << ": ";
 		cin >> n[i];
 	}
-	
+
 	// Algoritmo
 	for (size_t i = 0; i < long_arreglo; i++)
 	{
@@ -40,10 +40,8 @@ int main()
 	cout << "Arreglo Ordenado -----------" << endl;
 	for (size_t i = 0; i < long_arreglo; i++)
 	{
-		cout << "#" << i+1 << ": " << n[i] << endl;
+		cout << "#" << i + 1 << ": " << n[i] << endl;
 	}
-	
-	
 
 	return 0;
 }
