@@ -24,7 +24,7 @@ int main()
 	// Algoritmo
 	for (size_t i = 0; i < long_arreglo; i++)
 	{
-		for (size_t j = 0; j < long_arreglo; j++)
+		for (size_t j = i + 1; j < long_arreglo; j++)
 		{
 			if (n[j] > n[i])
 			{
