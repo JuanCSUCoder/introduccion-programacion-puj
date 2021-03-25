@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int buscarLetra(char letra, char cadena[])
+unsigned int buscarLetra(char letra, char cadena[])
 {
 	int acumulado = 0;
 
@@ -17,7 +17,7 @@ int buscarLetra(char letra, char cadena[])
 	return acumulado;
 }
 
-int localizarLetra(int orden, char letra, char cadena[])
+unsigned int localizarLetra(int orden, char letra, char cadena[])
 {
 	int posicion = -1;
 	bool encontrado = false;
@@ -40,7 +40,7 @@ int localizarLetra(int orden, char letra, char cadena[])
 	return posicion;
 }
 
-void imprimirEnPosiciones(char letraAImprimir, int posiciones[], int cant_posic)
+void imprimirEnPosiciones(char letraAImprimir, unsigned int posiciones[], unsigned int cant_posic)
 {
 	unsigned int posicion_max = 0;
 
@@ -79,7 +79,7 @@ void imprimirEnPosiciones(char letraAImprimir, int posiciones[], int cant_posic)
 	}
 }
 
-void reemplazarEnPosiciones(char cadena[], int posiciones[], int coincidencias, char letra)
+void reemplazarEnPosiciones(char cadena[], unsigned int posiciones[], unsigned int coincidencias, char letra)
 {
 	for (size_t i = 0; cadena[i] != '\0'; i++)
 	{
@@ -114,13 +114,13 @@ int main()
 	cin >> letra_a_buscar;
 
 	// Numero de Veces que se  Encontró la Letra Indicada
-	int coincidencias = buscarLetra(letra_a_buscar, cadena);
+	unsigned int coincidencias = buscarLetra(letra_a_buscar, cadena);
 
 	// Primera parte de la salida
 	cout << "Encontrada " << coincidencias << " veces en: " << cadena << endl;
 
 	// Declarar Arreglo de Posiciones con el Tamaño Necesario
-	int posiciones[coincidencias];
+	unsigned int posiciones[coincidencias];
 
 	// Alamcenar las posiciones en el arreglo
 	for (size_t i = 1; i <= coincidencias; i++)
