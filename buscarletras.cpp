@@ -79,6 +79,27 @@ void imprimirEnPosiciones(char letraAImprimir, int posiciones[], int cant_posic)
 	}
 }
 
+void reemplazarEnPosiciones(char cadena[], int posiciones[], int coincidencias, char letra)
+{
+	for (size_t i = 0; cadena[i] != '\0'; i++)
+	{
+		bool reemplazar = false;
+
+		for (size_t j = 0; j < coincidencias; j++)
+		{
+			if (posiciones[j] == i)
+			{
+				reemplazar = true;
+			}
+		}
+
+		if (reemplazar)
+		{
+			cadena[i] = letra;
+		}
+	}
+}
+
 int main()
 {
 	// Declarar Variables
@@ -96,8 +117,7 @@ int main()
 	int coincidencias = buscarLetra(letra_a_buscar, cadena);
 
 	// Primera parte de la salida
-	cout << "Se ha encontrado la letra " << coincidencias << " veces" << endl;
-	cout << "En las posiciones: " << cadena << endl;
+	cout << "Encontrada " << coincidencias << " veces en: " << cadena << endl;
 
 	// Declarar Arreglo de Posiciones con el Tamaño Necesario
 	int posiciones[coincidencias];
@@ -109,13 +129,27 @@ int main()
 	}
 
 	// Imprimir Ajuste de los Caracteres
-	cout << "                   ";
+	cout << "           "
+			 << "            ";
 
 	// Imprimir ^ en las posiciones del arreglo
 	imprimirEnPosiciones('^', posiciones, coincidencias);
 
 	// Terminar con un salto de línea
 	cout << endl;
+
+	/*
+		Hacer una función que cambie los caracteres en las posiciones seleccionadas
+	*/
+
+	char reemplazo;
+
+	cout << "Caracter de Reemplazo: ";
+	cin >> reemplazo;
+
+	reemplazarEnPosiciones(cadena, posiciones, coincidencias, reemplazo);
+
+	cout << "Cadena Modificada: " << cadena << endl;
 
 	return 0;
 }
