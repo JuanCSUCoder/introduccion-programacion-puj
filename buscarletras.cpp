@@ -150,6 +150,8 @@ int main()
 	reemplazarEnPosiciones(cadena, posiciones, coincidencias, reemplazo);
 
 	cout << "Cadena Modificada: " << cadena << endl;
+	cout << "Modificaciones ->  ";
+	imprimirEnPosiciones('^', posiciones, coincidencias);
 
 	return 0;
 }
