@@ -81,22 +81,9 @@ void imprimirEnPosiciones(char letraAImprimir, unsigned int posiciones[], unsign
 
 void reemplazarEnPosiciones(char cadena[], unsigned int posiciones[], unsigned int coincidencias, char letra)
 {
-	for (size_t i = 0; cadena[i] != '\0'; i++)
+	for (size_t i = 0; i < coincidencias; i++)
 	{
-		bool reemplazar = false;
-
-		for (size_t j = 0; j < coincidencias; j++)
-		{
-			if (posiciones[j] == i)
-			{
-				reemplazar = true;
-			}
-		}
-
-		if (reemplazar)
-		{
-			cadena[i] = letra;
-		}
+		cadena[posiciones[i]] = letra;
 	}
 }
 
