@@ -2,12 +2,13 @@
 
 using namespace std;
 
-int buscarLetra(char letra, char cadena[]) {
+int buscarLetra(char letra, char cadena[])
+{
 	int acumulado = 0;
 
-	for (size_t i = 0; cadena[i]!='\0'; i++)
+	for (size_t i = 0; cadena[i] != '\0'; i++)
 	{
-		if (cadena[i]==letra)
+		if (cadena[i] == letra)
 		{
 			acumulado++;
 		}
@@ -16,18 +17,19 @@ int buscarLetra(char letra, char cadena[]) {
 	return acumulado;
 }
 
-int localizarLetra(int orden, char letra, char cadena[]) {
+int localizarLetra(int orden, char letra, char cadena[])
+{
 	int posicion = -1;
 	bool encontrado = false;
 
 	for (size_t i = 0; cadena[i] != '\0' && !encontrado; i++)
 	{
-		if (cadena[i]==letra)
+		if (cadena[i] == letra)
 		{
 			orden--;
 		}
-		
-		if (orden==0)
+
+		if (orden == 0)
 		{
 			posicion = i;
 			encontrado = true;
@@ -37,8 +39,9 @@ int localizarLetra(int orden, char letra, char cadena[]) {
 	return posicion;
 }
 
-void imprimirEnPosiciones(char letraAImprimir, int posiciones[]) {
-	unsigned int cant_posic = sizeof(posiciones)/sizeof(posiciones[0]);
+void imprimirEnPosiciones(char letraAImprimir, int posiciones[])
+{
+	unsigned int cant_posic = sizeof(posiciones) / sizeof(posiciones[0]);
 	unsigned int posicion_max = 0;
 
 	for (size_t i = 0; i < cant_posic; i++)
@@ -48,32 +51,32 @@ void imprimirEnPosiciones(char letraAImprimir, int posiciones[]) {
 			posicion_max = posiciones[i];
 		}
 	}
-	
 
-	for (size_t i = 0; i < posicion_max+1; i++)
+	for (size_t i = 0; i < posicion_max + 1; i++)
 	{
 		bool encontrado = false;
 
 		for (size_t j = 0; j < cant_posic; j++)
 		{
-			if (posiciones[j]==i)
+			if (posiciones[j] == i)
 			{
 				encontrado = true;
 			}
 		}
-		
+
 		if (encontrado)
 		{
 			cout << letraAImprimir;
-		} else {
+		}
+		else
+		{
 			cout << " ";
 		}
-		
 	}
-	
 }
 
-int main() {
+int main()
+{
 	char cadena[30];
 
 	cout << "Cadena de Texto (máximo 30 caracteres): ";
@@ -93,7 +96,7 @@ int main() {
 
 	for (size_t i = 1; i <= coincidencias; i++)
 	{
-		posiciones[i-1] = localizarLetra(i, letra_a_buscar, cadena);
+		posiciones[i - 1] = localizarLetra(i, letra_a_buscar, cadena);
 	}
 
 	cout << "                   ";
