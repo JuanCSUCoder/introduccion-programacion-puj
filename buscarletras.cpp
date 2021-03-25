@@ -39,9 +39,8 @@ int localizarLetra(int orden, char letra, char cadena[])
 	return posicion;
 }
 
-void imprimirEnPosiciones(char letraAImprimir, int posiciones[])
+void imprimirEnPosiciones(char letraAImprimir, int posiciones[], int cant_posic)
 {
-	unsigned int cant_posic = sizeof(posiciones) / sizeof(posiciones[0]);
 	unsigned int posicion_max = 0;
 
 	for (size_t i = 0; i < cant_posic; i++)
@@ -101,7 +100,7 @@ int main()
 
 	cout << "                   ";
 
-	imprimirEnPosiciones('^', posiciones);
+	imprimirEnPosiciones('^', posiciones, coincidencias);
 
 	cout << endl;
 
