@@ -37,6 +37,42 @@ int localizarLetra(int orden, char letra, char cadena[]) {
 	return posicion;
 }
 
+void imprimirEnPosiciones(char letraAImprimir, int posiciones[]) {
+	unsigned int cant_posic = sizeof(posiciones)/sizeof(posiciones[0]);
+	unsigned int posicion_max = 0;
+
+	for (size_t i = 0; i < cant_posic; i++)
+	{
+		if (posiciones[i] > posicion_max)
+		{
+			posicion_max = posiciones[i];
+		}
+	}
+	
+
+	for (size_t i = 0; i < posicion_max+1; i++)
+	{
+		bool encontrado = false;
+
+		for (size_t j = 0; j < cant_posic; j++)
+		{
+			if (posiciones[j]==i)
+			{
+				encontrado = true;
+			}
+		}
+		
+		if (encontrado)
+		{
+			cout << letraAImprimir;
+		} else {
+			cout << " ";
+		}
+		
+	}
+	
+}
+
 int main() {
 	char cadena[30];
 
@@ -51,13 +87,20 @@ int main() {
 	int coincidencias = buscarLetra(letra_a_buscar, cadena);
 
 	cout << "Se ha encontrado la letra " << coincidencias << " veces" << endl;
-	cout << "En las posiciones: " << endl;
+	cout << "En las posiciones: " << cadena << endl;
+
+	int posiciones[coincidencias];
 
 	for (size_t i = 1; i <= coincidencias; i++)
 	{
-		cout << localizarLetra(i, letra_a_buscar, cadena) << endl;
+		posiciones[i-1] = localizarLetra(i, letra_a_buscar, cadena);
 	}
-	
+
+	cout << "                   ";
+
+	imprimirEnPosiciones('^', posiciones);
+
+	cout << endl;
 
 	return 0;
 }
