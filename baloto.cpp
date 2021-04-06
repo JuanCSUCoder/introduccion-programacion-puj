@@ -64,15 +64,16 @@ void proponerJuego(int arr[], int tam, int desde, int hasta)
 	}
 }
 
-int main(){
-	const int T=100;
+int main()
+{
+	const int T = 100;
 	int arreglo[T];
-	int tam=6;
+	int tam = 6;
 
 	inicializarArreglo(arreglo, tam, 0);
 	imprimirJuegoPropuesto(arreglo, tam);
-	proponerJuego(arreglo,tam,1,43);
-	imprimirJuegoPropuesto(arreglo,tam);
+	proponerJuego(arreglo, tam, 1, 43);
+	imprimirJuegoPropuesto(arreglo, tam);
 
 	return 0;
 }
