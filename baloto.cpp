@@ -2,13 +2,6 @@
 
 using namespace std;
 
-// void proponerJuegos(int vec[], int tama);
-
-
-#include <iostream>
-
-using namespace std;
-
 void inicializarArreglo(int vec[],int t, int valor){
  for (int i=0;i<t;i++){
   vec[i]=valor;
