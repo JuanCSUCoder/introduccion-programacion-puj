@@ -62,6 +62,23 @@ void proponerJuego(int arr[], int tam, int desde, int hasta)
 	}
 }
 
+void ordenarArreglo(int arr[], int tam) {
+		for (size_t i = 0; i < tam; i++)
+		{
+			for (size_t j = i + 1; j < tam; j++)
+			{
+				if (arr[j] < arr[i])
+				{
+					// Intercambiar
+					arr[j] += arr[i];
+					arr[i] = arr[j] - arr[i];
+					arr[j] -= arr[i];
+				}
+			}
+		}
+		
+}
+
 int main()
 {
 	const int T = 100;
@@ -72,7 +89,11 @@ int main()
 
 	inicializarArreglo(arreglo, tam, 0);
 	imprimirJuegoPropuesto(arreglo, tam);
+
 	proponerJuego(arreglo, tam, 1, 43);
+	imprimirJuegoPropuesto(arreglo, tam);
+
+	ordenarArreglo(arreglo, tam);
 	imprimirJuegoPropuesto(arreglo, tam);
 
 	return 0;
