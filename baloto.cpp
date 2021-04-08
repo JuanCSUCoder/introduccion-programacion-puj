@@ -62,6 +62,12 @@ void proponerJuego(int arr[], int tam, int desde, int hasta)
 	}
 }
 
+void intercambiar(int arr[], int elem1, int elem2) {
+	arr[elem2] += arr[elem1];
+	arr[elem1] = arr[elem2] - arr[elem1];
+	arr[elem2] -= arr[elem1];
+}
+
 void ordenarArreglo(int arr[], int tam) {
 		for (size_t i = 0; i < tam; i++)
 		{
@@ -69,10 +75,7 @@ void ordenarArreglo(int arr[], int tam) {
 			{
 				if (arr[j] < arr[i])
 				{
-					// Intercambiar
-					arr[j] += arr[i];
-					arr[i] = arr[j] - arr[i];
-					arr[j] -= arr[i];
+					intercambiar(arr, i, j);
 				}
 			}
 		}
