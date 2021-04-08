@@ -55,7 +55,7 @@ void proponerJuego(int arr[], int tam, int desde, int hasta)
 
 		while (se_repite)
 		{
-			candidato = rand() % (hasta + 1) + desde;
+			candidato = rand() % (hasta - desde + 1) + desde;
 
 			se_repite = existeEnElArreglo(arr, tam, candidato);
 		}
