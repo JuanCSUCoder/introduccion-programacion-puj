@@ -46,8 +46,6 @@ bool existeEnElArreglo(int arr[], int tam, int a_buscar)
 
 void proponerJuego(int arr[], int tam, int desde, int hasta)
 {
-	srand(time(NULL));
-
 	for (size_t i = 0; i < tam; i++)
 	{
 		bool se_repite = true;
@@ -69,6 +67,8 @@ int main()
 	const int T = 100;
 	int arreglo[T];
 	int tam = 6;
+
+	srand(time(NULL));
 
 	inicializarArreglo(arreglo, tam, 0);
 	imprimirJuegoPropuesto(arreglo, tam);
