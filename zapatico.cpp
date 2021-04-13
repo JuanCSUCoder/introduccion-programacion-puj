@@ -1,7 +1,7 @@
 // https://sophia.javeriana.edu.co/programacion/sites/default/files/pdfParciales/2018-30-PensamientoAlgoritmico-2.pdf
 
 /*
-Valores de la Simulación:
+Valores de la Simulacion:
 	- Nombres de los Participantes
 	- Estado de Cada Uno
 		'd' si tiene el pie derecho
