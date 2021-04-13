@@ -7,6 +7,8 @@ Valores de la Simulacion:
 		'd' si tiene el pie derecho
 		'i' si tiene el pie izquierdo
 		'f' si salió del juego
+
+	Prueba de Firma
 */
 
 #include <iostream>
