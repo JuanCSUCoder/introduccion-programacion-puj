@@ -45,6 +45,7 @@ void hacerMagia(int cuadrado[T][T])
 		if (cuadrado[T + filas % T - 1][columnas % T] != 0)
 		{
 			filas++;
+			columnas++;
 		}
 
 		cuadrado[T + filas % T - 1][columnas % T] = i + 1;
