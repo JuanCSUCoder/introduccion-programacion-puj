@@ -36,14 +36,15 @@ void imprimirCuadrado(int cuadrado[T][T])
 
 void hacerMagia(int cuadrado[T][T])
 {
-	int filas = -T / 2;
+	int filas = -T + 1;
 	int columnas = T / 2;
 	for (short i = 0; i < T * T; i++)
 	{
 		if (cuadrado[T + filas % T - 1][columnas % T] != 0)
 		{
 			filas++;
-			columnas++;
+			filas++;
+			columnas--;
 		}
 
 		cuadrado[T + filas % T - 1][columnas % T] = i + 1;
@@ -88,15 +89,17 @@ void imprimirCuadradoConSumas(int cuadrado[T][T])
 		cout << "=" << sumaFila(cuadrado, i) << endl;
 	}
 
-	for(short i = 0; i < T; i++) {
+	for (short i = 0; i < T; i++)
+	{
 		cout << "||" << '\t';
 	}
 	cout << endl;
 
-	for(short i = 0; i < T; i++) {
+	for (short i = 0; i < T; i++)
+	{
 		cout << sumaColumna(cuadrado, i) << '\t';
 	}
-	cout <<endl;
+	cout << endl;
 }
 
 int main()
