@@ -3,8 +3,6 @@
 // Se llama también cuadrado mágico
 // Arriba y a la derecha
 
-// No estoy seguro si era así
-
 #include <iostream>
 
 using namespace std;
