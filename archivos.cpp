@@ -26,6 +26,7 @@ int main()
 
 	// Con ios::out Crea el archivo si no existe o lo reemplaza si ya existe
 	// Con ios::app Lo abre para añadirle algo al final y si no existe lo crea
+	// Con ios::ate El modo de apertura quedo al final del archivo y permite mover el apuntador y permite modificar alguna posición
 	archivo.open("datos/ejemplo_archivos.txt", ios::app);
 
 	if (archivo.fail())
