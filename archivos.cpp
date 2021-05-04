@@ -44,5 +44,7 @@ int main()
 
 	archivo << yo.apellido << '\t' << yo.nombre << '\t' << yo.edad << endl;
 
+	archivo.close();
+
 	return 0;
 }
