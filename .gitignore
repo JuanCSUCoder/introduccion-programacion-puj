@@ -3,3 +3,5 @@ taller*
 evaluacion*
 .gitignore
 tareas*
+datos/*
+!datos/.gitkeep
