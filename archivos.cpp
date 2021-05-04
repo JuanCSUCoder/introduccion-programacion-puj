@@ -35,6 +35,8 @@ int main()
 		return 1;
 	}
 
+	cout << "El marcador esta en " << archivo.tellp() << endl;
+
 	cout << "Nombres: ";
 	cin >> yo.nombre;
 
