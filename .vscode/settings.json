@@ -3,7 +3,8 @@
 			"iostream": "cpp",
 			"ostream": "cpp",
 			"typeindex": "cpp",
-			"typeinfo": "cpp"
+			"typeinfo": "cpp",
+			"*.tcc": "cpp"
 		},
 		"cmake.configureOnOpen": false
 }
