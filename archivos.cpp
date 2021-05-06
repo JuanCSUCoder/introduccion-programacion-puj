@@ -51,3 +51,36 @@ int main()
 
 	return 0;
 }
+
+// void añadirEntrada(string nombre) {
+// 	cout << "" << endl;
+// }
+
+// void adicionarDatos(string nombreArchivo, &t)
+// {
+// 	fstream archivo;
+// 	archivo.open(nombreArchivo, ios::app);
+// 	if (archivo.fail())
+// 	{
+// 		cout << "No se pudo abrir el archivo" << endl;
+// 	}
+// 	else
+// 	{
+// 		string nombre;
+// 		int edad;
+// 		string sexo;
+
+// 		cout << "Nombre: ";
+// 		getline(cin, nombre);
+// 		archivo << nombre << ';';
+
+// 		cout << "Edad: ";
+// 		cin >> edad;
+// 		archivo << edad << ';';
+
+// 		cout << "Sexo: ";
+// 		getline(cin, sexo);
+// 		archivo << sexo << endl;
+// 	}
+// 	archivo.close();
+// }
