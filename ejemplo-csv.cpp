@@ -17,7 +17,7 @@ int main()
 
 	for (short i = 0; i < 20; i++)
 	{
-		csv << i << ',' << i * 2 << ',' << i * i << endl;
+		csv << i << ',' << i * 2 << ',' << i * i << '\t' << i + 2 << endl;
 	}
 
 	csv.close();
@@ -40,7 +40,7 @@ int main()
 
 	while (!csv_in.eof())
 	{
-		if (separador==',')
+		if (separador == ',')
 		{
 			separador = '\t';
 		}
