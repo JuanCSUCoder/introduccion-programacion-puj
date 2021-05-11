@@ -35,8 +35,17 @@ int main()
 	while (!csv_in.eof())
 	{
 		int temp;
+		char separador;
+
 		csv_in >> temp;
-		cout << temp << endl;
+		csv_in.get(separador);
+
+		if (separador==',')
+		{
+			separador = '\t';
+		}
+
+		cout << temp << separador;
 	}
 
 	csv_in.close();
