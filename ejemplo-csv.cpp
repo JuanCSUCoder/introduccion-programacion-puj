@@ -15,9 +15,9 @@ int main()
 		return 1;
 	}
 
-	for (short i = 0; i < 20; i++)
+	for (float i = 0; i < 20; i++)
 	{
-		csv << i << ',' << i * 2 << ',' << i * i << '\t' << i + 2 << endl;
+		csv << -i/4 << ',' << -i * 2 << ',' << i * i << '\t' << i + 2 << endl;
 	}
 
 	csv.close();
@@ -32,7 +32,7 @@ int main()
 		return 2;
 	}
 
-	int temp;
+	float temp;
 	char separador;
 
 	csv_in >> temp;
