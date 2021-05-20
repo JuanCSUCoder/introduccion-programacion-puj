@@ -137,7 +137,7 @@ int main()
 
 	cout << resultado.porcentaje_blancos << '/' << resultado.porcentaje_negros << endl;
 
-	cout << "Cuenta de Patron: " << contar_patrones(estrella, patron) << endl;
+	cout << "Cuenta de Patrones: " << contar_patrones(estrella, patron) << endl;
 
 	return 0;
 }
